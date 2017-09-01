@@ -21,13 +21,14 @@ module.exports = {
     }, // generating webpack bundle file and setting the entry point of the app to be app.jsx
     resolve: {
         root: __dirname,
+        modulesDirectories:[
+            'node_modules',
+            './app/components/',
+            './app/api/'
+        ],
         alias: {
             Main: 'app/components/Main.jsx',
             applicationStyle: 'app/styles/app.scss',
-            Nav: 'app/components/Navigation.jsx',
-            AddEmployee: 'app/components/AddEmployee.jsx',
-            EditProfile: 'app/components/EditProfile',
-            About: 'app/components/About'
         },
         extensions: ['', '.js', '.jsx']
     },
