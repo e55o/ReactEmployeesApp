@@ -17,10 +17,10 @@ var Nav = React.createClass({
                             <IndexLink to="/" activeClassName="active-link" activeStyle={{fontWeight: 'bold'}}>Add Employee</IndexLink>
                         </li>
                         <li>
-                            <Link to="/about" activeClassName= "active-link" activeStyle={{fontWeight: 'bold'}}>Edit Profiles</Link>
+                            <Link to="/editProfile" activeClassName= "active-link" activeStyle={{fontWeight: 'bold'}}>Edit Profiles</Link>
                         </li>
                         <li>
-                            <Link to="/examples" activeClassName= "active-link" activeStyle={{fontWeight: 'bold'}}>About</Link>
+                            <Link to="/about" activeClassName= "active-link" activeStyle={{fontWeight: 'bold'}}>About</Link>
                         </li>
                     </ul>
                 </div>

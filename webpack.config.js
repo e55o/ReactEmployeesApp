@@ -24,7 +24,10 @@ module.exports = {
         alias: {
             Main: 'app/components/Main.jsx',
             applicationStyle: 'app/styles/app.scss',
-            Nav: 'app/components/Navigation.jsx'
+            Nav: 'app/components/Navigation.jsx',
+            AddEmployee: 'app/components/AddEmployee.jsx',
+            EditProfile: 'app/components/EditProfile',
+            About: 'app/components/About'
         },
         extensions: ['', '.js', '.jsx']
     },
