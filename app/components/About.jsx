@@ -3,7 +3,10 @@ var React = require('react');
 var About = React.createClass({
     render: function(){
         return(
-            <div>About Test</div>
+            <div>
+                <h2 className= "AddEmployeeTitle"> About the App</h2>
+                <p>This applicaion is an Employee Directory App. It was done as a challenge, in order to familiarize myself with NodeJS, ReactJS, JSX Syntax, Webpack, SCSS and so many tools and frameworks.</p>
+            </div>
         );
     }
 });
