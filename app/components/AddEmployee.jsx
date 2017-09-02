@@ -35,11 +35,32 @@ var AddEmployee = React.createClass({
         return(
             <div>
                 <h3 className="AddEmployeeTitle">Add New Employee</h3>
-                <form onSubmit = {this.onFormSubmit}>
-                    <input type="text" ref="firstName" placeholder="First Name"/>
-                    <input type="text" ref="lastName" placeholder="Last Name"/>
-                    <input type="text" ref="email" placeholder="Email"/>
-                    <input type="text" ref="location" placeholder="Location"/>
+                <form onSubmit = {this.onFormSubmit} data-abide>
+
+                    <div className="name-field">
+                      <label>First Name <small>*</small>
+                          <input type="text" ref="firstName" placeholder="First Name" required pattern="[a-zA-Z]+"/>
+                        </label>
+                    </div>
+
+                    <div className="last-field">
+                      <label>Last Name <small>*</small>
+                          <input type="text" ref="lastName" placeholder="Last Name" required pattern="[a-zA-Z]+"/>
+                      </label>
+                    </div>
+
+                    <div className="email-field">
+                      <label>Email <small>*</small>
+                        <input type="email" ref="email" placeholder="Email" required/>
+                      </label>
+                    </div>
+
+                    <div className="location-field">
+                      <label>Location
+                          <input type="text" ref="location" placeholder="Location" pattern="[a-zA-Z]+"/>
+                      </label>
+                    </div>
+                    
                     <button className="button expanded">Add Employee</button>
                 </form>
                 <div className="row">
