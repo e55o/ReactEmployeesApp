@@ -8,7 +8,7 @@ var EmployeeApp = React.createClass({
     };
   },
   handleAddEmployee: function(name, last, email, location){
-    alert ("New Employee Added: " + name + last + email + location);
+    alert ("New Employee Added: " + name +' '+ last +' '+ email +' '+ location);
   },
     render: function(){
         var {employees} =this.state;
