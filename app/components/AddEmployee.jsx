@@ -21,7 +21,6 @@ var AddEmployee = React.createClass({
     }
   },
     render: function(){
-        var {employees} =this.state;
 
         return(
             <div>
@@ -54,8 +53,7 @@ var AddEmployee = React.createClass({
                     
                     <button className="button expanded">Add Employee</button>
                 </form>
-                
-            
+              
             </div>
         );
     }
