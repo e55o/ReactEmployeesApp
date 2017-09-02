@@ -51,7 +51,7 @@ var EditProfile = React.createClass({
         return(
             <div>
                 <h3 className="AddEmployeeTitle">Edit Employee Profile</h3>
-                <div className="">
+                <div className="columns medium-8 large-8 small-centered">
                     <EmployeeList employees={employees}/>
                 </div>
             

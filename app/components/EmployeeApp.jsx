@@ -1,7 +1,38 @@
 var React = require('react');
+var AddEmployee = require ('AddEmployee');
 
-var AddEmployee = React.createClass({
-    
+var EmployeeApp = React.createClass({
+    getInitialState: function () {
+    return {
+      employees: [
+        {
+          id: 1,
+          name: 'Marc',
+          last: 'Esso'
+        }, {
+          id: 2,
+          name: 'Andrew',
+          last:'Johnson'
+        }, {
+          id: 3,
+          name: 'Toni',
+          last: 'Rameh'
+        },{
+          id: 4,
+          name: 'Jean',
+          last: 'Fares'
+        }, {
+          id: 5,
+          name: 'Jessica',
+          last: 'Frenn'
+        }, {
+          id: 6,
+          name: 'Samira',
+          last: 'Abou Farah'
+        }
+      ]
+    };
+  },
   onFormSubmit: function(e){
     e.preventDefault();
     var name = this.refs.firstName.value;
@@ -61,4 +92,4 @@ var AddEmployee = React.createClass({
     }
 });
 
-module.exports = AddEmployee;
+module.exports = EmployeeApp;
