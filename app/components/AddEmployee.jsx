@@ -7,13 +7,24 @@ var AddEmployee = React.createClass({
       employees: [
         {
           id: 1,
-          name: 'Marc'
+          name: 'Marc',
+          last: 'Esso'
         }, {
           id: 2,
-          name: 'Andrew'
+          name: 'Andrew',
+          last:'Johnson'
         }, {
           id: 3,
-          name: 'Toni'
+          name: 'Toni',
+          last: 'Rameh'
+        },{
+          id: 4,
+          name: 'Jean',
+          last: 'Fares'
+        }, {
+          id: 5,
+          name: 'Jessica',
+          last: 'Frenn'
         }
       ]
     };
@@ -31,7 +42,12 @@ var AddEmployee = React.createClass({
                     <input type="text" ref="location" placeholder="Location"/>
                     <button className="button expanded">Add Employee</button>
                 </form>
-                <EmployeeList employees={employees}/>
+                <div className="row">
+                  <div className="small-12 small-centered columns">
+                    <EmployeeList employees={employees}/>
+                  </div>
+                </div>
+                
             
             </div>
         );
