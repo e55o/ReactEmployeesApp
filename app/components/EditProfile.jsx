@@ -35,6 +35,12 @@ var EditProfile = React.createClass({
           last: 'Frenn',
           email: 'marc.esso01@gmail.com',
           location: 'Beirut'
+        }, {
+          id: 6,
+          name: 'Samira',
+          last: 'Abou Farah',
+          email: 'samira.aboufarah@gmail.com',
+          location: 'Beirut'
         }
       ]
     };
@@ -45,7 +51,9 @@ var EditProfile = React.createClass({
         return(
             <div>
                 <h3 className="AddEmployeeTitle">Edit Employee Profile</h3>
-                <EmployeeList employees={employees}/>
+                <div className="">
+                    <EmployeeList employees={employees}/>
+                </div>
             
             </div>
         );

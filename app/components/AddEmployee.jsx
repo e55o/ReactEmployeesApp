@@ -25,6 +25,10 @@ var AddEmployee = React.createClass({
           id: 5,
           name: 'Jessica',
           last: 'Frenn'
+        }, {
+          id: 6,
+          name: 'Samira',
+          last: 'Abou Farah'
         }
       ]
     };
