@@ -14,17 +14,17 @@ var Nav = React.createClass({
                             Employees Directory
                         </li>
                         <li>
-                            <IndexLink to="/" activeClassName="active-link" activeStyle={{fontWeight: 'bold'}}>Add Employee</IndexLink>
+                            <IndexLink to="/" activeClassName="active-link" activeStyle={{fontWeight: 'bold'}}>Employee Portal</IndexLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/editProfile" activeClassName= "active-link" activeStyle={{fontWeight: 'bold'}}>Edit Profiles</Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/about" activeClassName= "active-link" activeStyle={{fontWeight: 'bold'}}>About</Link>
                         </li>
                     </ul>
                 </div>
-                 <div className="top-bar-right">
+                 {/* <div className="top-bar-right">
                     <form onSubmit={this.onSearch}>
                         <ul className="menu">
                             <li>
@@ -35,7 +35,7 @@ var Nav = React.createClass({
                             </li>
                         </ul>
                     </form>
-                </div> 
+                </div>  */}
             </div>
         );
     }

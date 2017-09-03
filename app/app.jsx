@@ -18,7 +18,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}> 
             <Route path="about" component={About}/>
-            <Route path="editProfile" component={EditProfile}/>
+            {/* <Route path="editProfile" component={EditProfile}/> */}
             <IndexRoute component= {EmployeeApp}/>
         </Route>
     </Router>,

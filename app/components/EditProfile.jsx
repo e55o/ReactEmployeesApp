@@ -1,45 +1,46 @@
 var React = require('react');
 var EmployeeList = require('EmployeeList');
 var EmployeeSearch = require('EmployeeSearch');
+var uuid = require ('node-uuid');
 
 var EditProfile = React.createClass({
     getInitialState: function () {
     return {
         showId1: false,
         searchText: '',
-      employees: [
+        employees: [
         {
-          id: 1,
+          id: uuid(),
           name: 'Marc',
           last: 'Esso',
           email: 'marc.esso01@gmail.com',
           location: 'Beirut'
         }, {
-          id: 2,
+          id: uuid(),
           name: 'Andrew',
           last: 'Johnson',
           email: 'andrew.johnson@gmail.com',
           location: 'London'
         }, {
-          id: 3,
+          id: uuid(),
           name: 'Toni',
           last: 'Rameh',
           email: 'toni.rameh@gmail.com',
           location: 'jbeil'
         },{
-          id: 4,
+          id: uuid(),
           name: 'Jean',
           last: 'Fares',
           email: 'jean.fares@gmail.com',
           location: 'Beirut'
         }, {
-          id: 5,
+          id: uuid(),
           name: 'Jessica',
           last: 'Frenn',
           email: 'jessica.frenn@gmail.com',
           location: 'New York City'
         }, {
-          id: 6,
+          id: uuid(),
           name: 'Samira',
           last: 'Abou Farah',
           email: 'samira.aboufarah@gmail.com',
@@ -61,7 +62,7 @@ var EditProfile = React.createClass({
             <div>
                 <h3 className="AddEmployeeTitle">Edit Employee Profile</h3>
                 <EmployeeSearch onSearch = {this.handleSearch} />
-                <div className="columns medium-10 large-10 small-centered">
+                <div className="columns medium-12 large-12 small-centered">
                     <EmployeeList employees={employees}/>
                 </div>
             
