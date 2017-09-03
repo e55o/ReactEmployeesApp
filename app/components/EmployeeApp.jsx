@@ -11,41 +11,7 @@ var EmployeeApp = React.createClass({
     return {
         showId1: false,
         searchText: '',
-        employees: [
-        {
-          id: uuid(),
-          name: 'Marc',
-          last: 'Esso',
-          email: 'marc.esso01@gmail.com',
-          location: 'Beirut',
-          position: 'Developer',
-          deleted: 'false'
-        }, {
-          id: uuid(),
-          name: 'Jad',
-          last: 'Joubran',
-          email: 'jad.joubran@gmail.com',
-          location: 'New York City',
-          position: 'Delivery Manager',
-          deleted: 'true'
-        }, {
-          id: uuid(),
-          name: 'Samira',
-          last:'Abou Farah',
-          email: 'samira.aboufarah@gmail.com',
-          location: 'Beirut',
-          position: 'Head Manager',
-          deleted: 'false'
-        }, {
-          id: uuid(),
-          name: 'Walid',
-          last: 'Fares',
-          email:'walid.fares@gmail.com',
-          location: 'Beirut',
-          position: 'Financial Consultant',
-          deleted: 'false'
-        }
-      ]
+        employees: EmployeeAPI.getEmployees()
     };
   },
   componentDidUpdate: function() {
