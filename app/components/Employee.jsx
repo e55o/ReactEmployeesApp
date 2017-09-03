@@ -4,7 +4,7 @@ var Employee = React.createClass({
     render: function(){
         var {id, name, last, position, email, location, deleted} = this.props;
         return (
-            <div>
+            <div className="container__header">
                 <div>
                     <h6>{name} {last}</h6> <h6>Position: {position}</h6>({email}), Location: {location} <h6></h6>
                 </div>

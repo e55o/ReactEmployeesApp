@@ -18,7 +18,7 @@ var EmployeeSearch = React.createClass({
                 <div>
                 <label>
                     <input type="checkbox" ref="showId1" onChange={this.handleSearch}/>
-                    <small>Show Deleted Employees</small>
+                    <small>Show Resigned Employees</small>
                 </label>
                 </div>
             </div>

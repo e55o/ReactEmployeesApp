@@ -34,12 +34,12 @@ var EmployeeList = React.createClass({
             <div>
                 <h3 className="AddEmployeeTitle">Employees List</h3>
                 {renderEmployees()}
-                <Pagination
+                {/* <Pagination
                     activePage={activePage}
                     itemsCountPerPage={2}
                     totalItemsCount={50}
                     pageRangeDisplayed={5}
-                    onChange={this.handlePageChange} />
+                    onChange={this.handlePageChange} /> */}
                 
             </div>
         )
