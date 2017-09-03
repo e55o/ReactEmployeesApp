@@ -11,7 +11,7 @@ var EmployeeSearch = React.createClass({
 
     render: function () {
         return (
-            <div>
+            <div className="container__header">
                 <div>
                 <input type="search" ref="searchText" placeholder="Search Employee" onChange={this.handleSearch}/>
                 </div>

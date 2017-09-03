@@ -27,7 +27,7 @@ var AddEmployee = React.createClass({
     render: function(){
 
         return(
-            <div>
+            <div className = "container__footer">
                 <h3 className="AddEmployeeTitle">Add New Employee</h3>
                 <form onSubmit = {this.onFormSubmit} data-abide>
 

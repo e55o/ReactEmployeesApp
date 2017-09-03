@@ -9,7 +9,6 @@ var Employee = React.createClass({
                     <h6>{name} {last}</h6> <h6>Position: {position}</h6>({email}), Location: {location} <h6></h6>
                 </div>
                 <div className="stacked-for-small button-group">
-                    <a className="success button">Edit</a>
                     <div onClick= {()=> {
                         this.props.onToggle(id);    
                     }}>
