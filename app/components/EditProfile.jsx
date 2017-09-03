@@ -1,9 +1,12 @@
 var React = require('react');
 var EmployeeList = require('EmployeeList');
+var EmployeeSearch = require('EmployeeSearch');
 
 var EditProfile = React.createClass({
     getInitialState: function () {
     return {
+        showId1: false,
+        searchText: '',
       employees: [
         {
           id: 1,
@@ -45,12 +48,19 @@ var EditProfile = React.createClass({
       ]
     };
   },
+    handleSearch: function(showId1, searchText) {
+        this.setState ({
+            showId1: showId1,
+            searchText: searchText.toLowerCase()
+        });
+    },
     render: function(){
         var {employees} =this.state;
 
         return(
             <div>
                 <h3 className="AddEmployeeTitle">Edit Employee Profile</h3>
+                <EmployeeSearch onSearch = {this.handleSearch} />
                 <div className="columns medium-10 large-10 small-centered">
                     <EmployeeList employees={employees}/>
                 </div>
