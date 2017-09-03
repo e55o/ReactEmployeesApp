@@ -32,19 +32,19 @@ var AddEmployee = React.createClass({
                 <form onSubmit = {this.onFormSubmit} data-abide>
 
                     <div className="name-field">
-                      <label>First Name <small>*</small>
+                      <label>First Name <small className="stars">*</small>
                           <input type="text" ref="firstName" placeholder="First Name" required pattern="[a-zA-Z]+"/>
                         </label>
                     </div>
 
                     <div className="last-field">
-                      <label>Last Name <small>*</small>
+                      <label>Last Name <small className="stars">*</small>
                           <input type="text" ref="lastName" placeholder="Last Name" required pattern="[a-zA-Z]+"/>
                       </label>
                     </div>
 
                     <div className="email-field">
-                      <label>Email <small>*</small>
+                      <label>Email <small className="stars">*</small>
                         <input type="email" ref="email" placeholder="Email" required/>
                       </label>
                     </div>
@@ -56,7 +56,7 @@ var AddEmployee = React.createClass({
                     </div>
 
                     <div className="position-field">
-                      <label>Position <small>*</small>
+                      <label>Position <small className="stars">*</small>
                           <input type="text" ref="position" placeholder="Position" pattern="[a-zA-Z]+" required/>
                       </label>
                     </div>
