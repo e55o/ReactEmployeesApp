@@ -6,7 +6,7 @@ var Employee = React.createClass({
         return (
             <div>
             <div>
-                <h5>{id}. {name} {last}</h5> <h5>Position: {position}</h5>({email}), Location: {location} <h6></h6>
+                <h5>{name} {last}</h5> <h5>Position: {position}</h5>({email}), Location: {location} <h6></h6>
             </div>
             <div className="stacked-for-small button-group">
                 <a className="success button">Edit</a>

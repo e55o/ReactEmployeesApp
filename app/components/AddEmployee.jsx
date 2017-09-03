@@ -8,15 +8,17 @@ var AddEmployee = React.createClass({
     var last = this.refs.lastName.value;
     var email = this.refs.email.value;
     var location = this.refs.location.value;
+    var position = this.refs.position.value;
 
     if(name.length>0 && last.length>0 && email.length>0){
       this.refs.firstName.value = '';
       this.refs.lastName.value = '';
       this.refs.email.value= '';
       this.refs.location.value = '';
+      this.refs.position.value = '';
       
 
-      this.props.onAddEmployee(name, last, email, location);
+      this.props.onAddEmployee(name, last, email, location, position);
       
     } else {
         this.refs.name.focus();
@@ -55,7 +57,7 @@ var AddEmployee = React.createClass({
 
                     <div className="position-field">
                       <label>Position <small>*</small>
-                          <input type="text" ref="location" placeholder="Position" pattern="[a-zA-Z]+ required"/>
+                          <input type="text" ref="position" placeholder="Position" pattern="[a-zA-Z]+" required/>
                       </label>
                     </div>
                     

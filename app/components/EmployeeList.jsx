@@ -14,6 +14,7 @@ var EmployeeList = React.createClass({
 
         return (
             <div>
+                <h3 className="AddEmployeeTitle">Employees List</h3>
                 {renderEmployees()}
             </div>
         )

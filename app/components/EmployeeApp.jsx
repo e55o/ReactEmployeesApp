@@ -44,13 +44,17 @@ var EmployeeApp = React.createClass({
       ]
     };
   },
-  handleAddEmployee: function(name, last, email, location){
+  handleAddEmployee: function(name, last, email, location, position){
     this.setState({
         employees: [
             ...this.state.employees,
             {
               id: uuid(),
               name: name, 
+              last: last,
+              email: email,
+              location: location,
+              position: position
             }
         ]
     })
