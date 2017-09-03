@@ -18,5 +18,13 @@ module.exports = {
     }
 
     return $.isArray(employees) ? employees : [];
+  },
+  filterEmployees: function (employees, showId1, searchText) {
+      var filteredEmployees = employees;
+
+      filteredEmployees = filteredEmployees.filter((employee) => {
+        return !employee.deleted || showId1;
+      });
+      return filteredEmployees;
   }
 };
