@@ -1,10 +1,10 @@
 var React = require('react');
-var AddEmployee = require ('AddEmployee');
-var EditProfile = require('EditProfile');
 var uuid = require('node-uuid');
 
+var AddEmployee = require ('AddEmployee');
 var EmployeeList = require('EmployeeList');
 var EmployeeSearch = require('EmployeeSearch');
+var EmployeeAPI = require ('EmployeeAPI');
 
 var EmployeeApp = React.createClass({
     getInitialState: function () {
@@ -18,31 +18,38 @@ var EmployeeApp = React.createClass({
           last: 'Esso',
           email: 'marc.esso01@gmail.com',
           location: 'Beirut',
-          position: 'Developer'
+          position: 'Developer',
+          deleted: 'false'
         }, {
           id: uuid(),
           name: 'Jad',
           last: 'Joubran',
           email: 'jad.joubran@gmail.com',
           location: 'New York City',
-          position: 'Delivery Manager'
+          position: 'Delivery Manager',
+          deleted: 'true'
         }, {
           id: uuid(),
           name: 'Samira',
           last:'Abou Farah',
           email: 'samira.aboufarah@gmail.com',
           location: 'Beirut',
-          position: 'Head Manager'
+          position: 'Head Manager',
+          deleted: 'false'
         }, {
           id: uuid(),
           name: 'Walid',
           last: 'Fares',
           email:'walid.fares@gmail.com',
           location: 'Beirut',
-          position: 'Financial Consultant'
+          position: 'Financial Consultant',
+          deleted: 'false'
         }
       ]
     };
+  },
+  componentDidUpdate: function() {
+    EmployeeAPI.setEmployees(this.state.employees);
   },
   handleAddEmployee: function(name, last, email, location, position){
     this.setState({
@@ -54,17 +61,29 @@ var EmployeeApp = React.createClass({
               last: last,
               email: email,
               location: location,
-              position: position
+              position: position,
+              deleted: false
             }
         ]
     })
+  },
+  handleToggle: function (id) {
+    var deletedEmployees = this.state.employees.map((employee)=> {
+        if (employee.id === id) {
+            employee.deleted = !employee.deleted;
+        }
+        return employee;
+    });
+    
+    this.setState({employees: deletedEmployees});
   },
     render: function(){
         var {employees} =this.state;
 
         return(
             <div>
-                <EmployeeList employees={employees}/>
+                <EmployeeSearch />
+                <EmployeeList employees={employees} onToggle={this.handleToggle}/>
                 <AddEmployee onAddEmployee={this.handleAddEmployee}/>
             </div>
         );

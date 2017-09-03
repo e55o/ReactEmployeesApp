@@ -7,7 +7,7 @@ var EmployeeList = React.createClass({
         var renderEmployees = () => {
             return employees.map((employee) => {
                 return (
-                    <Employee key={employee.id} {...employee}/>
+                    <Employee key={employee.id} {...employee} onToggle={this.props.onToggle}/>
                 );
             });
         }; //Custom Renderer
