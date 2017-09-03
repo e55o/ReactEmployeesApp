@@ -25,6 +25,22 @@ module.exports = {
       filteredEmployees = filteredEmployees.filter((employee) => {
         return !employee.deleted || showId1;
       });
+
+      filteredEmployees.sort((a,b) => {
+         if (!a.deleted && !b.deleted){
+             return -1;
+         } else if (a.deleted && !b.deleted) {
+             return 1;
+         } else {
+             return 0;
+         }
+      });
+
+      filteredEmployees = filteredEmployees.filter((employee) => {
+        var text = employee.name.toLowerCase();
+        return searchText.length === 0 || text.indexOf(searchText) > -1;
+      });
+
       return filteredEmployees;
   }
 };

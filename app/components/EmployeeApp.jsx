@@ -43,13 +43,19 @@ var EmployeeApp = React.createClass({
     
     this.setState({employees: deletedEmployees});
   },
+  handleSearch: function (showId1, searchText) {
+    this.setState({
+      showId1: showId1,
+      searchText: searchText.toLowerCase()
+    });
+  },
 render: function(){
         var {employees, showId1, searchText} =this.state;
         var filteredEmployees = EmployeeAPI.filterEmployees(employees, showId1, searchText);
 
         return(
             <div>
-                <EmployeeSearch />
+                <EmployeeSearch onSearch= {this.handleSearch}/>
                 <EmployeeList employees={filteredEmployees} onToggle={this.handleToggle}/>
                 <AddEmployee onAddEmployee={this.handleAddEmployee}/>
             </div>

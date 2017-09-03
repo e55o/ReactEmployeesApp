@@ -2,6 +2,7 @@ var React = require ('react');
 
 var EmployeeSearch = React.createClass({
     handleSearch: function(){
+
         var showId1 = this.refs.showId1.checked;
         var searchText = this.refs.searchText.value;
 
@@ -12,14 +13,13 @@ var EmployeeSearch = React.createClass({
         return (
             <div>
                 <div>
-                    <h5></h5>
-                    <input type="search" ref= "searchText" placeholder="Search Employee" onChange={this.handleSearch} />
+                <input type="search" ref="searchText" placeholder="Search Employee" onChange={this.handleSearch}/>
                 </div>
                 <div>
-                    <label>
-                        <input type="checkbox" ref="showId1" onChange={this.handleSearch} />
-                        Show ID 1 Employee
-                    </label>
+                <label>
+                    <input type="checkbox" ref="showId1" onChange={this.handleSearch}/>
+                    Show Id 1
+                </label>
                 </div>
             </div>
         );
