@@ -1,9 +1,23 @@
 var React = require('react');
 var Employee = require('Employee');
+var Pagination = require('Pagination');
 
 var EmployeeList = React.createClass({
+
+    getInitialState: function() {
+        return {
+            activePage: 15
+        }
+    },
+    
+    handlePageChange: function (pageNumber) {
+    console.log(`active page is ${pageNumber}`);
+    this.setState({activePage: pageNumber});
+    },
+
     render: function(){
         var {employees} = this.props;
+        var {activePage} = this.props;
         var renderEmployees = () => {
             if(employees.length ===0){
                 return (
@@ -16,11 +30,17 @@ var EmployeeList = React.createClass({
                 );
             });
         }; //Custom Renderer
-
         return (
             <div>
                 <h3 className="AddEmployeeTitle">Employees List</h3>
                 {renderEmployees()}
+                <Pagination
+                    activePage={activePage}
+                    itemsCountPerPage={2}
+                    totalItemsCount={50}
+                    pageRangeDisplayed={5}
+                    onChange={this.handlePageChange} />
+                
             </div>
         )
     }
