@@ -8,7 +8,7 @@ var EditProfile = require('EditProfile');
 var About = require('About');
 
 //Load foundation
-require('style!css!foundation-sites/dist/foundation.min.css')
+require('style!css!foundation-sites/dist/foundation.css')
 $(document).foundation();
 
 //App CSS
