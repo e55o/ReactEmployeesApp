@@ -1,6 +1,5 @@
 var React = require('react');
 var Employee = require('Employee');
-var Pagination = require('Pagination');
 
 var EmployeeList = React.createClass({
 
@@ -21,7 +20,7 @@ var EmployeeList = React.createClass({
         var renderEmployees = () => {
             if(employees.length ===0){
                 return (
-                    <p className="container__message"> No Employees Added </p>
+                    <p className="container__message"> No Employees Found </p>
                 );
             }
             return employees.map((employee) => {
@@ -34,13 +33,6 @@ var EmployeeList = React.createClass({
             <div>
                 <h3 className="AddEmployeeTitle">Employees List</h3>
                 {renderEmployees()}
-                {/* <Pagination
-                    activePage={activePage}
-                    itemsCountPerPage={2}
-                    totalItemsCount={50}
-                    pageRangeDisplayed={5}
-                    onChange={this.handlePageChange} /> */}
-                
             </div>
         )
     }
