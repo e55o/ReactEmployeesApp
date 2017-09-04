@@ -3,20 +3,8 @@ var Employee = require('Employee');
 
 var EmployeeList = React.createClass({
 
-    getInitialState: function() {
-        return {
-            activePage: 15
-        }
-    },
-    
-    handlePageChange: function (pageNumber) {
-    console.log(`active page is ${pageNumber}`);
-    this.setState({activePage: pageNumber});
-    },
-
     render: function(){
         var {employees} = this.props;
-        var {activePage} = this.props;
         var renderEmployees = () => {
             if(employees.length ===0){
                 return (
